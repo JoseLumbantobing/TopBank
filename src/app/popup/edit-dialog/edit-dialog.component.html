@@ -1,0 +1,46 @@
+<form [formGroup]="myform" (ngSubmit)="editNasabah()">
+    <h1 mat-dialog-title>{{ inputdata.title }}</h1>
+    <div mat-dialog-content class="tabel-data">
+      <label for="name">Name</label>
+      <mat-form-field>
+      <!-- <mat-label>Nama</mat-label> -->
+      <input matInput formControlName="name">
+      </mat-form-field>
+
+      <label for="account">Nomor Rekening</label>
+      <mat-form-field>
+      <!-- <mat-label>Nomor Rekening</mat-label> -->
+      <input matInput formControlName="account" id="account" readonly>
+      </mat-form-field>
+
+      <label for="email">Email</label>
+      <mat-form-field>
+      <!-- <mat-label>Email</mat-label> -->
+      <input matInput formControlName="email">
+      </mat-form-field>
+
+      <label for="phone">Nomor Telepon</label>
+      <mat-form-field>
+      <!-- <mat-label>Nomor Telepon</mat-label> -->
+      <input matInput formControlName="phone">
+      </mat-form-field>
+
+      <label for="card">Jenis Kartu Debit</label>
+      <mat-form-field>
+      <!-- <mat-label>Jenis Kartu Debit</mat-label> -->
+      <input matInput formControlName="card" id="card" readonly>
+      </mat-form-field>
+
+      <label for="motherName">Nama Gadis Ibu Kandung</label>
+      <mat-form-field>
+      <!-- <mat-label>Nama Gadis Ibu Kandung</mat-label> -->
+      <input matInput formControlName="motherName">
+      </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+      <div class="btn-actions">
+        <a (click)="closepopup()" class="btn-batal">Batal</a>
+        <button type="submit" class="btn-simpan">Simpan</button>
+      </div>
+    </div>
+</form>

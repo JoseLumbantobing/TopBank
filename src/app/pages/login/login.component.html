@@ -1,0 +1,38 @@
+<div class="login-container">
+  <div class="header">
+    <span class="topbank-header">Topbank</span>
+  </div>
+
+  <div class="main-content">
+    <div class="left-content">
+      <img src="../../../assets/Login-Img.png" alt="Logo">
+    </div>
+
+    <div class="right-content">
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm)">
+        <h2>Login</h2>
+        <div class="login-input">
+          <label for="email">Email</label>
+          <input 
+          formControlName="email"
+          type="email"  
+          id="email"
+          autocomplete="off" 
+          placeholder="Youremail@gmail.com">
+        </div>
+
+        <div class="login-input password-input">
+          <label for="password">Password</label>
+          <input 
+          formControlName="password"
+          type="password" 
+          id="password" 
+          autocomplete="off"
+          placeholder="Enter your password">
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+</div>

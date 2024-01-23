@@ -1,0 +1,24 @@
+<div class="header">
+    <span class="topbank-header">Topbank</span>
+    <div class="header-right">
+        <img src="../../../assets/placeholder.png" alt="profile-img">
+        <div class="profile-dropdown" *ngIf="isUserLoggedIn">
+            <div class="drop-down" (click)="toggleDropdown()">
+                <span class="user-name">Bambang</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path opacity="0.9" d="M16 10L12 14L8 10" stroke="#333333" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+            </div>
+            <div *ngIf="isDropdownOpen" class="dropdown-content">
+                <div class="drop-down-item" (click)="logout()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="16" viewBox="0 0 19 16" fill="none">
+                        <path d="M13.1517 5.33333L12.1385 6.27333L13.2738 7.33333H7.40317V8.66667H13.2738L12.1385 9.72L13.1517 10.6667L16.0259 8L13.1517 5.33333ZM4.52892 3.33333H9.55886V2H4.52892C3.7385 2 3.0918 2.6 3.0918 3.33333V12.6667C3.0918 13.4 3.7385 14 4.52892 14H9.55886V12.6667H4.52892V3.33333Z" fill="#EB5757"/>
+                    </svg>
+                    <span>Keluar</span>
+                </div>
+            </div>
+            <p class="admin-role">Super Admin</p>
+        </div>
+    </div>
+</div>
+  

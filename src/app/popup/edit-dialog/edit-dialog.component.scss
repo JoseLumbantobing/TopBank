@@ -1,0 +1,60 @@
+mat-card{
+    margin: 2%;
+    text-align: left;
+}
+
+.mat-mdc-form-field {
+    width: 98%;
+    margin: 1%;
+}
+
+.mat-50{
+    width: 48%;
+    margin: 1%;
+}
+
+button{
+    margin: 2px;
+}
+
+form {
+    padding: 24px 32px;
+}
+
+// mat-form-field {
+//     border: 1px solid red;
+// }
+
+// .tabel-data {
+//     padding: 50px;
+// }
+
+#card, #account {
+    color: #c3c3c3;
+}
+
+.btn-actions{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    font-weight: 600;
+}
+
+.btn-batal {
+    border: 1px solid #006EFF;
+    border-radius: 48px;
+    color: #006EFF;
+    cursor: pointer;
+    padding: 12px 48px;
+    text-decoration: none;
+}
+
+.btn-simpan {
+    border-radius: 48px;
+    border: none;
+    background-color: #006EFF;
+    cursor: pointer;
+    color: #fff;
+    padding: 12px 48px;
+}
