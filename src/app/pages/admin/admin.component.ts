@@ -8,6 +8,10 @@ import { MatTable } from '@angular/material/table';
 import { Admin } from 'src/app/model/admin/admin';
 import { AdminService } from 'src/app/services/admin.service';
 import { AuthService } from 'src/app/services/auth.service';
+import { MatDialog } from '@angular/material/dialog';
+import { AddAdminComponent } from 'src/app/popup/add-admin/add-admin.component';
+import { EditAdminComponent } from 'src/app/popup/edit-admin/edit-admin.component';
+import { DeleteAdminComponent } from 'src/app/popup/delete-admin/delete-admin.component';
 
 @Component({
   selector: 'app-admin',
@@ -36,8 +40,8 @@ export class AdminComponent {
     private router: Router,
     private http: HttpClient,
     private adminService: AdminService,
-    private authService: AuthService
-    // private dialog: MatDialog
+    private authService: AuthService,
+    private dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -66,6 +70,60 @@ export class AdminComponent {
       this.totalItems = res.data.length;
       this.dataSource = new MatTableDataSource(res.data);
       this.dataSource.paginator = this.paginator;
+    })
+  }
+
+  addAdmin(){
+    this.openPopUp('Tambah Admin');
+  }
+
+  editAdmin(code: any) {
+    this.editPopUp(code, 'Edit Admin');
+  }
+
+  deleteAdmin(code: any) {
+    this.deletePopUp(code);
+  }
+
+  openPopUp(title: any){
+    var _popup = this.dialog.open(AddAdminComponent, {
+      width: '40%',
+      enterAnimationDuration: '500ms',
+      exitAnimationDuration: '500ms',
+      data: {
+        title: title
+      }
+    });
+    _popup.afterClosed().subscribe(item => {
+      this.getMethod();
+    })
+  }
+
+  editPopUp(code:any, title: any){
+    var _popup = this.dialog.open(EditAdminComponent, {
+      width: '40%',
+      enterAnimationDuration: '500ms',
+      exitAnimationDuration: '500ms',
+      data: {
+        title: title,
+        code: code
+      }
+    });
+    _popup.afterClosed().subscribe(item => {
+      this.getMethod();
+    })
+  }
+
+  deletePopUp(code:any){
+    var _popup = this.dialog.open(DeleteAdminComponent, {
+      enterAnimationDuration: '500ms',
+      exitAnimationDuration: '500ms',
+      data: {
+        code: code
+      }
+    });
+    _popup.afterClosed().subscribe(item => {
+      this.getMethod();
     })
   }
 

@@ -13,11 +13,18 @@ import { AdminModule } from './pages/admin/admin.module';
 import { EditDialogComponent } from './popup/edit-dialog/edit-dialog.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { AddAdminComponent } from './popup/add-admin/add-admin.component';
+import { MatSelectModule } from '@angular/material/select';
+import { EditAdminComponent } from './popup/edit-admin/edit-admin.component';
+import { DeleteAdminComponent } from './popup/delete-admin/delete-admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EditDialogComponent
+    EditDialogComponent,
+    AddAdminComponent,
+    EditAdminComponent,
+    DeleteAdminComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +37,8 @@ import { MatInputModule } from '@angular/material/input';
     NasabahModule,
     AdminModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

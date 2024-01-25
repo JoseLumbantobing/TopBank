@@ -1,0 +1,35 @@
+<form [formGroup]="myform" (ngSubmit)="addAdmin()">
+    <h1 mat-dialog-title>{{ inputdata.title }}</h1>
+    <div mat-dialog-content class="tabel-data">
+      <label for="name">Nama</label>
+      <mat-form-field>
+        <input matInput formControlName="name" required>
+      </mat-form-field>
+
+      <label for="email">Email</label>
+      <mat-form-field>
+        <input matInput formControlName="email" required>
+      </mat-form-field>
+      
+      <label *ngIf="isAdminRole('1')" for="password">Password:</label>
+      <mat-form-field *ngIf="isAdminRole('1')">
+        <input matInput type="password" id="password" formControlName="password" required />
+      </mat-form-field>
+
+      <label for="role">Role:</label>
+      <mat-form-field>
+        <mat-select formControlName="role" required>
+          <mat-option *ngFor="let role of roles" [value]="role.value">
+            {{ role.label }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </div>
+    <div mat-dialog-actions>
+      <div class="btn-actions">
+        <a (click)="closepopup()" class="btn-batal">Batal</a>
+        <button type="submit" class="btn-simpan">Simpan</button>
+      </div>
+    </div>
+</form>

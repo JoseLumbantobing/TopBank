@@ -1,0 +1,39 @@
+.card {
+    padding: 48px 36px 36px;
+    width: 400px;
+}
+
+.confirm-line {
+    text-align: center;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.confirm-line p {
+    padding: 24px 0;
+}
+
+.btn-actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.btn-no {
+    border: 1px solid #EB5757;
+    border-radius: 48px;
+    color: #EB5757;
+    cursor: pointer;
+    padding: 12px 48px;
+    text-decoration: none;
+}
+
+.btn-yes {
+    border-radius: 48px;
+    border: none;
+    background-color: #006EFF;
+    cursor: pointer;
+    color: #fff;
+    padding: 12px 56px;
+}

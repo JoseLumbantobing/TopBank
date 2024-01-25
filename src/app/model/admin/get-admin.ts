@@ -1,4 +1,4 @@
-import { GetDataAdmin } from "./gat-data-admin";
+import { GetDataAdmin } from "./get-data-admin";
 
 export interface GetAdmin {
     success: boolean;

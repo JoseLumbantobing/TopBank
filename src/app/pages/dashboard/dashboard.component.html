@@ -60,6 +60,9 @@
           <a routerLink="/list-admin">List Admin</a>
         </li>
       </ul>
+      <div class="sidebar-banner">
+        <img src="../../../assets/sidebar-banner.png" alt="sidebar-banner">
+      </div>
     </div>
   
     <div class="content" [ngClass]="{'content-expanded': sidenavOpened}">
@@ -70,21 +73,66 @@
             <div class="admin-data">
               <div class="admin-wrap">
                 <span>Admin Name</span>
-                <!-- <p>Kylian Mbappe</p> -->
                 <p>{{ adminData?.adminName }}</p>
               </div>
               <div class="admin-wrap role">
                 <span>Role</span>
-                <!-- <p>Super Admin</p> -->
                 <p>{{ adminData?.adminRoleDto?.adminRoleName }}</p>
               </div>
               <div class="admin-wrap">
                 <span>Admin Code</span>
-                <!-- <p>CS-001</p> -->
                 <p>{{ adminData?.adminCode }}</p>
               </div>
             </div>
-            <div class="pie-chart"></div>
+            <div class="chart">
+              <p class="chart-header">Tujuan Pembukaan Rekening</p>
+              <div class="chart-cont">
+                <div class="data-kiri">
+                  <div class="pie-chart">
+                    <p-chart type="doughnut" [data]="data" [options]="options"></p-chart>
+                    <div class="data-bawah">
+                      <div class="sort-data">
+                        <div class="lainnya-color"></div>
+                        <div class="data-chart">
+                          <p class="desc">Lainnya</p>
+                          <p>{{ accountData.detail[4].percentage.toFixed(1) }}%</p>
+                        </div>
+                      </div>
+                      <div class="sort-data">
+                        <div class="pinjaman-color"></div>
+                        <div class="data-chart">
+                          <p class="desc">Pinjaman</p>
+                          <p>{{ accountData.detail[3].percentage.toFixed(1) }}%</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="data-kanan">
+                  <div class="sort-data">
+                    <div class="tabungan-color"></div>
+                    <div class="data-chart">
+                      <p class="desc">Tabungan</p>
+                      <p>{{ accountData.detail[0].percentage.toFixed(1) }}%</p>
+                    </div>
+                  </div>
+                  <div class="sort-data">
+                    <div class="pembayaran-color"></div>
+                    <div class="data-chart">
+                      <p class="desc">Pembayaran</p>
+                      <p>{{ accountData.detail[1].percentage.toFixed(1) }}%</p>
+                    </div>
+                  </div>
+                  <div class="sort-data">
+                    <div class="investasi-color"></div>
+                    <div class="data-chart">
+                      <p class="desc">Investasi</p>
+                      <p>{{ accountData.detail[2].percentage.toFixed(1) }}%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

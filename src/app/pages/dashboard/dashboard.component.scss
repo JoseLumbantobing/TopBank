@@ -25,8 +25,10 @@
 }
 
 .header-content-left {
+  display: flex;
+  align-items: center;
   padding-left: 24px;
-  gap: 100px;
+  gap: 50px;
 }
 
 .main {
@@ -49,6 +51,11 @@
 }
 
 .sidenav li {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
   cursor: pointer;
   width: 80%;
 }
@@ -63,6 +70,16 @@
 .sidenav li a {
   text-decoration: none;
   color: #777;
+}
+
+.sidebar-banner {
+  display: flex;
+  justify-content: center;
+}
+
+.sidenav img {
+  width: 70%;
+  margin-top: 50%;
 }
 
 .sidenav-closed {
@@ -152,7 +169,8 @@
 .card .admin-data {
   display: flex;
   flex-wrap: wrap;
-  width: 350px;
+  width: 340px;
+  height: 150px;
 }
 
 .card .admin-data .role {
@@ -163,9 +181,75 @@
 .card .admin-data span {
   font-weight: 400;
 }
+.card .chart {
+  width: 350px;
+  height: 250px;
+}
 
 .card .pie-chart {
-  border: 1px solid red;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
+}
+
+.card .chart-cont {
+  display: flex;
+  gap: 72px;
+}
+
+.card .chart-header {
+  color: #7C7C7C;
+  font-weight: normal;
+}
+
+.card .data-bawah {
+  display: flex;
+  gap: 24px;
+}
+
+.card .data-bawah .lainnya-color {
+  background: #FF495F;
+  width: 12px;
+  height: 12px;
+}
+
+.card .data-bawah .pinjaman-color {
+  background: #FFB038;
+  width: 12px;
+  height: 12px;
+}
+
+.card .data-kanan .tabungan-color {
+  background: #5EE173;
+  width: 12px;
+  height: 12px;
+}
+
+.card .data-kanan .pembayaran-color {
+  background: #3A82EF;
+  width: 12px;
+  height: 12px;
+}
+
+.card .data-kanan .investasi-color {
+  background: #EE3CD2;
+  width: 12px;
+  height: 12px;
+}
+
+.card .sort-data {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.card .data-chart p {
+  margin: 0;
+}
+
+.card .data-chart .desc {
+  font-weight: normal;
+}
+
+.card .data-chart {
+  margin: 13px 0;
 }
